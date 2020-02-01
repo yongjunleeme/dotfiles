@@ -49,20 +49,6 @@ autocmd BufWritePre *.md call LastModified()
 
 " 새로운 문서 파일 만들었을 때 기본 형식이 입력되도록 한다
 function! NewTemplate()
-
-    let l:wiki_directory = v:false
-
-    for wiki in g:vimwiki_list
-        if expand('%:p:h') . '/' == wiki.path
-            let l:wiki_directory = v:true
-            break
-        endif
-    endfor
-
-    if !l:wiki_directory
-        return
-    endif
-
     if line("$") > 1
         return
     endif
