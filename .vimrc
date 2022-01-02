@@ -154,9 +154,7 @@ au BufReadPost *
 \ exe "norm g`\"" |
 \ endif
 
-
 "syntax on
-colorscheme desert
 if has("syntax")
  syntax on
 endif
@@ -201,69 +199,6 @@ imap ,/ /* */<ESC>2F*a<SPACE>
 
 "Ultisnips 오류 방지
 let g:UltiSnipsSnippetDirectories = []
-set nopaste
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
-
-Plugin 'vimwiki/vimwiki'
-Plugin 'mhinz/vim-startify'
-Plugin 'junegunn/fzf'
-Plugin 'valloric/youcompleteme'
-Plugin 'junegunn/fzf.vim'
-
-
-"snipMate 4줄
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"
-Plugin 'The-NERD-tree'
-nnoremap <F12>n :NERDTreeToggle<ENTER>
-
-Plugin 'jelera/vim-javascript-syntax'
-
 
 " 커서가 있는 줄을 강조함
 set cursorline
@@ -271,8 +206,6 @@ set cursorline
 " 상태바 표시를 항상한다
 set laststatus=2 
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
-
-
 
 " 구름 입력
 set noimd
